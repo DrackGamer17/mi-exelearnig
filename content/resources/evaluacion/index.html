@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluación: red informática</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1 id="titulo"></h1>
+    <p id="instrucciones"></p>
+    <div id="progreso" aria-live="polite"></div>
+  </header>
+
+  <!-- Las preguntas se crean desde script.js (ver CONFIG.preguntas) -->
+  <form id="cuestionario" autocomplete="off"></form>
+
+  <div id="acciones">
+    <button type="button" id="btnComprobar"></button>
+    <button type="button" id="btnReintentar" hidden></button>
+  </div>
+
+  <section id="resultado" aria-live="polite" hidden></section>
+
+  <script src="script.js"></script>
+</body>
+</html>

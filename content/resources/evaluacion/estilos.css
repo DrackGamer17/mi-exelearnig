@@ -1,0 +1,118 @@
+/* ==========================================================
+   estilos.css - Apariencia de la evaluación
+   Cambia los colores en las variables de :root.
+   ========================================================== */
+:root {
+  --fondo: #ffffff;
+  --texto: #1e293b;
+  --texto-suave: #64748b;
+  --tarjeta: #f8fafc;
+  --borde: #cbd5e1;
+  --acento: #2563eb;          /* botones y opción marcada */
+  --acento-oscuro: #1d4ed8;
+  --acierto: #15803d;
+  --acierto-fondo: #dcfce7;
+  --error: #b91c1c;
+  --error-fondo: #fee2e2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 12px 14px 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+h1 { font-size: 20px; margin: 4px 0 6px; }
+#instrucciones { margin: 0 0 8px; color: var(--texto-suave); }
+
+#progreso {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--acento);
+  margin-bottom: 10px;
+}
+
+.pregunta {
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--tarjeta);
+  padding: 12px 14px;
+  margin: 0 0 12px;
+}
+
+.pregunta legend {
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+.opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 9px 12px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+.opcion:hover { border-color: var(--acento); }
+.opcion input { margin-top: 3px; accent-color: var(--acento); }
+.opcion.marcada { border-color: var(--acento); background: #eff6ff; }
+
+/* Estados después de comprobar */
+.opcion.correcta { border-color: var(--acierto); background: var(--acierto-fondo); }
+.opcion.incorrecta { border-color: var(--error); background: var(--error-fondo); }
+.bloqueado .opcion { cursor: default; }
+
+.explicacion {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  border-left: 4px solid var(--acento);
+  background: #eff6ff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.explicacion.ok { border-color: var(--acierto); background: var(--acierto-fondo); }
+.explicacion.mal { border-color: var(--error); background: var(--error-fondo); }
+
+button {
+  background: var(--acento);
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 20px;
+  margin-right: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: var(--acento-oscuro); }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+#btnReintentar { background: #475569; }
+
+#aviso {
+  color: var(--error);
+  font-weight: bold;
+  margin: 8px 0 0;
+}
+
+#resultado {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid var(--acento);
+  background: #eff6ff;
+  text-align: center;
+}
+#resultado .nota { font-size: 34px; font-weight: bold; color: var(--acento); margin: 4px 0; }
+#resultado.aprobado { border-color: var(--acierto); background: var(--acierto-fondo); }
+#resultado.aprobado .nota { color: var(--acierto); }
+#resultado.reprobado { border-color: var(--error); background: var(--error-fondo); }
+#resultado.reprobado .nota { color: var(--error); }

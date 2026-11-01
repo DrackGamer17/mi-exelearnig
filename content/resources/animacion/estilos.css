@@ -1,0 +1,64 @@
+/* ==========================================================
+   estilos.css - Apariencia de la animación de red informática
+   Para cambiar los colores de la página, edita las variables
+   de la sección :root. Los colores del dibujo en el lienzo
+   se cambian en script.js (objeto CONFIG.colores).
+   ========================================================== */
+
+:root {
+  --fondo-pagina: #0f172a;    /* color de fondo de toda la página */
+  --fondo-lienzo: #111c36;    /* color de fondo del lienzo */
+  --borde-lienzo: #334155;    /* color del borde del lienzo */
+  --texto: #e2e8f0;           /* color del texto general */
+  --texto-mensaje: #fde68a;   /* color del mensaje que explica el recorrido */
+  --boton: #2563eb;           /* color de los botones */
+  --boton-hover: #1d4ed8;     /* color de los botones al pasar el mouse */
+}
+
+body {
+  margin: 0;
+  padding: 8px 0 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fondo-pagina);
+  color: var(--texto);
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 10px 8px 4px;
+}
+
+#mensaje {
+  font-size: 15px;
+  min-height: 22px;
+  margin: 4px 8px 8px;
+  color: var(--texto-mensaje);
+}
+
+canvas {
+  background: var(--fondo-lienzo);
+  border: 2px solid var(--borde-lienzo);
+  border-radius: 10px;
+  max-width: 96%;
+  height: auto;
+}
+
+#botones {
+  margin-top: 8px;
+}
+
+button {
+  background: var(--boton);
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 15px;
+  margin: 4px 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--boton-hover);
+}
